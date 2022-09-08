@@ -9,7 +9,7 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:4200/", maxAge = 3600, allowedHeaders = "*")
 @RestController
 public class FacturaRestService {
-    private static final Logger log = LoggerFactory.getLogger(LoadData.class);
+    private static final Logger log = LoggerFactory.getLogger(FacturaRestService.class);
 
     private final Ventas ventas;
 

@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 public class DirectorioRestService {
 
-    private static final Logger log = LoggerFactory.getLogger(LoadData.class);
+    private static final Logger log = LoggerFactory.getLogger(DirectorioRestService.class);
 
     private final Directorio directorio;
 
