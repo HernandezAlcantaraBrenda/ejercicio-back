@@ -6,6 +6,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 
+import java.util.Date;
+
 @Configuration
 public class LoadData {
 
@@ -22,7 +24,7 @@ public class LoadData {
             );
             log.info(
                     "Creando factura" + facturaRepository.save(
-                            new Factura(repository.findByIdentificacion("32"))
+                            new Factura(repository.findByIdentificacion("32"), new Date() , 45.34f)
                     )
             );
         };

@@ -15,12 +15,13 @@ public class Persona {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
-
+    @Column(nullable = false)
     private String nombre;
     private String apellidoMaterno;
+    @Column(nullable = false)
     private String apellidoPaterno;
 
-
+    @Column(nullable = false, unique = true)
     private String identificacion;
 
     @OneToMany

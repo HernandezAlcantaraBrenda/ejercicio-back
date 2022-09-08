@@ -2,10 +2,7 @@ package com.example.ejercicio.core;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,6 +21,11 @@ public class FacturaRestService {
     List<Factura> index(@PathVariable Long id) {
         log.info("obteniendo facturas");
         return this.ventas.findFacturasByPersona(id);
+    }
+    @PostMapping("/facturas")
+    Factura save(@RequestBody Factura factura) {
+        log.info("Guardando factura");
+        return ventas.storeFactura(factura);
     }
 
 }
